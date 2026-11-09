@@ -1,0 +1,39 @@
+// C4 — Nível 2 (Contêineres) — Plataforma Ecosol
+// Gerar: dot -Tpng -Gdpi=200 c4-nivel2-conteineres.dot -o c4-nivel2-conteineres.png
+digraph C4_Conteineres {
+  graph [rankdir=TB, fontname="Arial", nodesep=0.7, ranksep=0.85, pad=0.3, bgcolor="white", compound=true,
+];
+  node  [fontname="Arial", shape=box, style="rounded,filled", fontcolor="white", penwidth=0, margin="0.22,0.12"];
+  edge  [fontname="Arial", fontsize=9.5, color="#555555", fontcolor="#333333", arrowsize=0.8];
+
+  publico [fillcolor="#08427B", label=<<b>Público geral</b><br/><font point-size="9">[Pessoa]</font><br/><font point-size="9.5">Navegador do computador ou celular</font>>];
+  equipe  [fillcolor="#08427B", label=<<b>Equipe da Casa Paul Singer</b><br/><font point-size="9">[Pessoa — Administrador]</font>>];
+  busc    [fillcolor="#999999", label=<<b>Buscadores e redes sociais</b><br/><font point-size="9">[Sistemas externos]</font>>];
+
+  subgraph cluster_sistema {
+    label=<<b>Plataforma Ecosol</b>  <font point-size="10">[Sistema de software]</font>>;
+    fontname="Arial"; fontsize=13; style="dashed,rounded"; color="#444444"; fontcolor="#222222"; margin=22;
+
+    web [fillcolor="#438DD5", label=<<b>Aplicação web pública</b><br/><font point-size="9">[Contêiner: Next.js 16, React, TypeScript, Tailwind CSS]</font><br/><br/><font point-size="10">Renderiza no servidor as páginas públicas:<br/>home, coletivos, perfil, agenda, mapa e Saiba mais.<br/>O mapa (Leaflet) roda no navegador.<br/>Hospedada na Vercel.</font>>];
+
+    django [fillcolor="#438DD5", label=<<b>Aplicação Django</b><br/><font point-size="9">[Contêiner: Python, Django 5.2, Django REST Framework, Django Admin + Unfold]</font><br/><br/><font point-size="10">API REST pública somente leitura (/api/) com paginação,<br/>busca e filtros; área administrativa (/admin/) com login<br/>por sessão; regras de visibilidade e de LGPD.<br/>Imagem Docker hospedada no Render.</font>>];
+
+    db [shape=cylinder, style=filled, fillcolor="#438DD5", margin="0.25,0.18", label=<<b>Banco de dados</b><br/><font point-size="9">[Contêiner: PostgreSQL — Supabase]</font><br/><br/><font point-size="10">Coletivos, pessoas, categorias, eventos,<br/>pontos de interesse e usuários.<br/>Esquema gerido pelas migrations do Django.</font>>];
+
+    storage [shape=cylinder, style=filled, fillcolor="#438DD5", margin="0.25,0.18", label=<<b>Armazenamento de imagens</b><br/><font point-size="9">[Contêiner: Supabase Storage, compatível com S3]</font><br/><br/><font point-size="10">Fotos dos coletivos, galerias de eventos<br/>e capas dos pontos de interesse.</font>>];
+    {rank=same; db; storage;}
+  }
+
+  osm [fillcolor="#999999", label=<<b>OpenStreetMap</b><br/><font point-size="9">[Sistema externo]</font><br/><font point-size="9.5">Tiles do mapa base</font>>];
+
+  {rank=same; publico; busc; equipe;}
+
+  publico -> web     [label="  Acessa as páginas\n  [HTTPS]"];
+  busc    -> web     [label="  Indexam e geram\n  prévia de links\n  [HTTPS]"];
+  equipe  -> django  [xlabel="Administra pelo /admin/\n[HTTPS, sessão httpOnly]"];
+  web     -> django  [label="  Lê dados no servidor\n  (somente GET)\n  [HTTPS/JSON]"];
+  web     -> storage [label="  Busca imagens públicas\n  [HTTPS]"];
+  web     -> osm     [labeldistance=5.5, labelangle=55, headlabel="Mapa no navegador\ncarrega os tiles\n[HTTPS]"];
+  django  -> db      [label="  Lê e grava\n  [SQL, psycopg]"];
+  django  -> storage [label="  Envia imagens\n  [API S3, django-storages]"];
+}

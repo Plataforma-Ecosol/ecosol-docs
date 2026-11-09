@@ -1,0 +1,13 @@
+# Arquivos temporários do Word e do LibreOffice
+~$*
+.~lock.*#
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ferramentas
+node_modules/
+__pycache__/
+.venv/
+schema.json

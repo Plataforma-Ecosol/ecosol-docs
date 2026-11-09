@@ -1,0 +1,91 @@
+// Diagrama de classes UML do domínio — Plataforma Ecosol (app `rede`, ecosol-backend)
+// Fonte da verdade: rede/models/*.py. Gerar: dot -Tpng -Gdpi=200 diagrama-classes.dot -o diagrama-classes.png
+digraph Classes {
+  graph [rankdir=LR, fontname="Arial", nodesep=0.25, ranksep=0.55, pad=0.3, bgcolor="white", splines=polyline,
+];
+  node  [shape=plaintext, fontname="Arial", fontsize=10];
+  edge  [fontname="Arial", fontsize=10, color="#333333", arrowsize=0.9];
+
+  Coletivo [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>Coletivo</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">nome: String<br/>slug: String {único}<br/>descricao: Texto<br/>bairro: String<br/>site: URL<br/>foto: Imagem [0..1]<br/>foto_descricao: String<br/>telefone: String<br/>exibir_telefone_publicamente: Boolean<br/>email: Email<br/>exibir_email_publicamente: Boolean<br/>instagram: String<br/>exibir_instagram_publicamente: Boolean<br/>cnpj: String<br/>data_inicio: Data [0..1]<br/>responsavel_grupo: String<br/>motivo_criacao: Texto<br/>renda_obtida: Decimal [0..1]<br/>historico_editais: Texto<br/>logradouro: String<br/>numero: String<br/>complemento: String<br/>cep: String<br/>ativo: Boolean = true<br/>situacao: Situacao = regular<br/>nome_entrevistador: String<br/>observacoes: Texto<br/>criado_em: DataHora<br/>atualizado_em: DataHora</td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">save(): void  «registra o slug anterior»</td></tr>
+  </table>>];
+
+  Pessoa [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>Pessoa</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">nome: String<br/>nome_social: String<br/>data_nascimento: Data [0..1]<br/>cpf: String<br/>rg: String<br/>rne_crnm: String<br/>naturalidade: String<br/>estado_civil: String<br/>email: Email<br/>instagram: String<br/>facebook: String<br/>site: URL<br/>telefone: String<br/>cep: String<br/>logradouro: String<br/>bairro: String<br/>municipio: String<br/>estado: String<br/>escolaridade: String<br/>empreendimento_individual: Texto<br/><i>«sensível» cor_raca: String</i><br/><i>«sensível» sexo: String</i><br/><i>«sensível» identidade_genero: String</i><br/><i>«sensível» orientacao_sexual: String</i><br/><i>«sensível» pessoa_com_deficiencia: Boolean</i><br/><i>«sensível» qual_deficiencia: String</i><br/><i>«sensível» renda_familiar: String</i><br/><i>«sensível» rede_protecao_social: String</i><br/><i>«sensível» participacao_programas_sociais: String</i><br/>criado_em: DataHora<br/>atualizado_em: DataHora</td></tr>
+   <tr><td border="1" sides="T" color="#1E487C"> </td></tr>
+  </table>>];
+
+  Categoria [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>Categoria</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">nome: String<br/>slug: String {único}</td></tr>
+   <tr><td border="1" sides="T" color="#1E487C"> </td></tr>
+  </table>>];
+
+  ColetivoSlugAnterior [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>ColetivoSlugAnterior</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">slug: String {único}<br/>criado_em: DataHora</td></tr>
+   <tr><td border="1" sides="T" color="#1E487C"> </td></tr>
+  </table>>];
+
+  PontoDeInteresse [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>PontoDeInteresse</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">nome: String<br/>tipo: TipoPonto<br/>descricao: Texto<br/>latitude: Decimal {-90..90}<br/>longitude: Decimal {-180..180}<br/>endereco: String<br/>imagem_capa: Imagem [0..1]<br/>ativo: Boolean = true<br/>criado_em: DataHora<br/>atualizado_em: DataHora</td></tr>
+   <tr><td border="1" sides="T" color="#1E487C"> </td></tr>
+  </table>>];
+
+  Evento [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>Evento</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">titulo: String<br/>slug: String {único}<br/>descricao: Texto<br/>data_inicio: DataHora<br/>data_fim: DataHora [0..1]<br/>local: String<br/>bairro: String<br/>link: URL<br/>ativo: Boolean = true<br/>criado_em: DataHora<br/>atualizado_em: DataHora</td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">{data_fim ≥ data_inicio}</td></tr>
+  </table>>];
+
+  ImagemEvento [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>ImagemEvento</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">imagem: Imagem<br/>legenda: String<br/>ordem: Inteiro ≥ 0<br/>criado_em: DataHora</td></tr>
+   <tr><td border="1" sides="T" color="#1E487C"> </td></tr>
+  </table>>];
+
+  Usuario [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#D9E2F3" align="center"><b>Usuario</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C"><i>(herda os campos de AbstractUser)</i></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">__str__(): String</td></tr>
+  </table>>];
+
+  AbstractUser [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#F2F2F2" color="#7F7F7F">
+   <tr><td align="center"><font point-size="9">«Django»</font><br/><b>AbstractUser</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#7F7F7F">username: String {único}<br/>password: String «hash»<br/>first_name: String<br/>last_name: String<br/>email: Email<br/>is_staff: Boolean<br/>is_active: Boolean<br/>is_superuser: Boolean<br/>last_login: DataHora [0..1]<br/>date_joined: DataHora</td></tr>
+   <tr><td border="1" sides="T" color="#7F7F7F"> </td></tr>
+  </table>>];
+
+  Situacao [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#EDEDED" align="center"><font point-size="9">«enumeração»</font><br/><b>Situacao</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">regular<br/>em_transicao<br/>encerrado</td></tr>
+  </table>>];
+
+  TipoPonto [label=<
+  <table border="1" cellborder="0" cellspacing="0" cellpadding="3" bgcolor="#FFFFFF" color="#1E487C"><tr><td bgcolor="#EDEDED" align="center"><font point-size="9">«enumeração»</font><br/><b>TipoPonto</b></td></tr>
+   <tr><td align="left" balign="left" border="1" sides="T" color="#1E487C">orgao_es<br/>loja_fisica<br/>feira_arariboia</td></tr>
+  </table>>];
+
+  // Associações (multiplicidades: taillabel = lado de origem, headlabel = lado de destino)
+  Pessoa -> Coletivo               [dir=none, taillabel="0..*", headlabel="1", label="pessoas"];
+  Coletivo -> PontoDeInteresse     [dir=none, taillabel="0..1", headlabel="0..*", label="coletivo"];
+  Coletivo -> Categoria            [dir=none, taillabel="0..*", headlabel="0..*", label="categorias"];
+  Coletivo -> ColetivoSlugAnterior [dir=back, arrowtail=diamond, taillabel="1", headlabel="0..*", label="slugs_anteriores"];
+  Coletivo -> Situacao             [style=dashed, arrowhead=vee];
+  PontoDeInteresse -> TipoPonto    [style=dashed, arrowhead=vee];
+  Evento -> ImagemEvento           [dir=back, arrowtail=diamond, taillabel="1", headlabel="0..*", label="imagens"];
+  Usuario -> AbstractUser          [arrowhead=onormal, arrowsize=1.2];
+  // arestas invisíveis e grupos de rank só para o layout
+  Pessoa -> ImagemEvento [style=invis];
+  Situacao -> Usuario [style=invis];
+
+  {rank=same; Pessoa; Evento;}
+  {rank=same; Coletivo; ImagemEvento;}
+  {rank=same; PontoDeInteresse; Categoria; ColetivoSlugAnterior; Situacao;}
+  {rank=same; TipoPonto; Usuario; AbstractUser;}
+}
