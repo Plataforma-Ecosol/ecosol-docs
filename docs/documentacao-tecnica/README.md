@@ -1,31 +1,39 @@
-# Documentação Técnica do Projeto Integrador (Engenharia de Software)
+# Plataforma Ecosol: documentação
 
-Documento único e incremental da Plataforma Ecosol, no template do IFRJ Campus Niterói.
+Documentação técnica e de planejamento da **Plataforma Ecosol**, a plataforma web da
+rede de Economia Solidária de Niterói. O projeto é desenvolvido na ITES (Incubadora
+Tecnológica de Empreendimentos Solidários) do IFRJ Campus Niterói, em parceria com a
+Casa Paul Singer (Centro Público de Economia Solidária), e é também o Projeto
+Integrador da disciplina de Engenharia de Software (2026.2).
 
-| Arquivo | O que é |
+Este repositório reúne o que não é código: a documentação técnica do Projeto
+Integrador, os diagramas e a Wiki do projeto.
+
+## Links do projeto
+
+| O quê | Onde |
 | --- | --- |
-| `Documentacao_Tecnica_Plataforma_Ecosol.docx` | Versão editável (registre cada mudança na tabela de controle de versões) |
-| `Documentacao_Tecnica_Plataforma_Ecosol.pdf` | Versão para entrega |
-| `diagramas/` | C4 níveis 1 e 2, diagrama de classes e modelo lógico (fonte `.dot`, `.svg` vetorial e `.png`) |
-| `fonte/` | Scripts que geram o modelo lógico a partir dos models do Django e o `.docx` |
+| Site (homologação) | <https://ecosol-frontend.vercel.app> |
+| API (homologação) | <https://ecosol-backend-homolog.onrender.com/api/> |
+| Backend (Django) | <https://github.com/Plataforma-Ecosol/ecosol-backend> |
+| Frontend (Next.js) | <https://github.com/Plataforma-Ecosol/ecosol-frontend> |
+| Infraestrutura (Docker) | <https://github.com/Plataforma-Ecosol/ecosol-infra> |
+| Quadro Scrum | <https://github.com/orgs/Plataforma-Ecosol/projects/1> |
+| Wiki | <https://github.com/Plataforma-Ecosol/ecosol-docs/wiki> |
 
-## Regenerar os diagramas
+## O que tem aqui
 
-Precisa do Graphviz (`dot`/`neato`).
+| Caminho | Conteúdo |
+| --- | --- |
+| [docs/documentacao-tecnica](docs/documentacao-tecnica) | Documentação técnica (.docx editável e PDF), diagramas C4, de classes e modelo lógico |
+| [docs/especificacao-requisitos](docs/especificacao-requisitos) | Especificação dos requisitos (AV2), em Markdown e PDF: histórias de usuário, casos de uso e matriz de rastreabilidade |
+| [Wiki](https://github.com/Plataforma-Ecosol/ecosol-docs/wiki) | Planejamento, processo Scrum, sprints, arquitetura e guias da equipe |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Como propor mudanças na documentação |
 
-```bash
-cd diagramas
-dot -Tsvg c4-nivel1-contexto.dot -o c4-nivel1-contexto.svg
-dot -Tsvg c4-nivel2-conteineres.dot -o c4-nivel2-conteineres.svg
-dot -Tsvg diagrama-classes.dot -o diagrama-classes.svg
-```
+## Equipe
 
-O modelo lógico sai dos models reais do backend (rode a partir de um clone do `ecosol-backend` com as dependências instaladas):
+Jean Macedo, Vinícius Pontes e Pietro Gomes.
 
-```bash
-python fonte/schema.py /caminho/ecosol-backend > schema.json
-python fonte/gerar_modelo_logico.py schema.json diagramas/modelo-logico.dot fixo
-neato -n2 -Tsvg diagramas/modelo-logico.dot -o diagramas/modelo-logico.svg
-```
+## Licença
 
-Ao mudar um model, atualize o diagrama de classes (`diagrama-classes.dot`) e regenere o modelo lógico.
+Distribuído sob a licença [GNU GPLv3](LICENSE), a mesma dos repositórios de código.
