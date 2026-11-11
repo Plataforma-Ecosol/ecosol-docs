@@ -26,6 +26,7 @@ Integrador, os diagramas e a Wiki do projeto.
 | Caminho | Conteúdo |
 | --- | --- |
 | [docs/documentacao-tecnica](docs/documentacao-tecnica) | Documentação técnica (.docx editável e PDF), diagramas C4, de classes e modelo lógico |
+| [docs/especificacao-requisitos](docs/especificacao-requisitos) | Especificação dos requisitos (AV2), em Markdown e PDF: histórias de usuário, casos de uso e matriz de rastreabilidade |
 | [Wiki](https://github.com/Plataforma-Ecosol/ecosol-docs/wiki) | Planejamento, processo Scrum, sprints, arquitetura e guias da equipe |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Como propor mudanças na documentação |
 
