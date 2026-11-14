@@ -68,7 +68,19 @@ Dez requisitos tiveram o texto ajustado: RF01, RF04, RF07, RF09, RF14, RF15, RF1
 
 ## Prioridade do MVP
 
-Os 19 requisitos funcionais compõem o MVP, que já está publicado em homologação, e todos têm prioridade alta: a plataforma só cumpre o objetivo de dar visibilidade à rede com o portal, a área administrativa e a API funcionando juntos. As regras de negócio e os requisitos não funcionais acompanham os requisitos funcionais a que se ligam, como mostra a [matriz de rastreabilidade](matriz-de-rastreabilidade.md). Os itens de evolução da seção 1.2 da documentação técnica (e-mail de confirmação, formação em ES, aptidão do coletivo e página pública de privacidade) ainda não são requisitos e não foram especificados.
+Os 19 requisitos funcionais compõem o MVP, que já está publicado em homologação, e todos têm prioridade alta: a plataforma só cumpre o objetivo de dar visibilidade à rede com o portal, a área administrativa e a API funcionando juntos. As regras de negócio e os requisitos não funcionais acompanham os requisitos funcionais a que se ligam, como mostra a [matriz de rastreabilidade](matriz-de-rastreabilidade.md). Os demais itens de evolução da seção 1.2 da documentação técnica (e-mail de confirmação, formação em ES, aptidão do coletivo e página pública de privacidade) ainda não são requisitos e não foram especificados.
+
+## Requisitos incluídos na versão 1.3
+
+No planejamento das releases (A4), a equipe definiu o escopo da Sprint 3 (Release 3, de 16/11 a 27/11/2026) a partir dos pedidos da Casa Paul Singer. Três funcionalidades dessa sprint viraram requisitos novos, com códigos que continuam a numeração existente:
+
+| Requisito | História | Origem |
+| --- | --- | --- |
+| **RF20** — relatório de coletivos para a equipe, com indicadores, gráficos e filtros, só com dados agregados | [HU21](historias-de-usuario.md#hu21) | ecosol-backend #55 e ecosol-frontend #66 |
+| **RF21** — “Saiba mais” organizado em três subgrupos (Casa Paul Singer, Economia Solidária e ITES/IFRJ) | [HU22](historias-de-usuario.md#hu22) | ecosol-frontend #71 |
+| **RF22** — conteúdo do “Saiba mais” editável pela área administrativa | [HU23](historias-de-usuario.md#hu23) | ecosol-backend #60 |
+
+Os três têm prioridade alta para a Release 3. O texto completo de cada um está na seção 1.3 da documentação técnica, versão 1.3. O indicador de coletivos aptos, citado na ecosol-backend #56, depende do cálculo de aptidão (ecosol-backend #28), que continua no backlog, e por isso não faz parte do RF20.
 
 ## <a id="pendencias"></a>Pendências
 
