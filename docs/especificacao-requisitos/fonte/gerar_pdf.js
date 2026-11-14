@@ -30,7 +30,7 @@ const CAPA = {
   equipe: "Não se aplica (equipe sem nome definido)",
   integrantes: ["Jean de Pinho Macedo", "Vinícius Pontes Braga", "Pietro Gomes Borges"],
   entrega: "AV2: especificação detalhada dos requisitos",
-  base: `Requisitos da seção 1.3 da <a href="${DOC_TECNICA}">documentação técnica</a>, versão 1.1`,
+  base: `Requisitos da seção 1.3 da <a href="${DOC_TECNICA}">documentação técnica</a>, versão 1.3`,
   semestre: "2026.2",
 };
 

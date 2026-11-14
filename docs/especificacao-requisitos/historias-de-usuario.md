@@ -24,6 +24,9 @@ Histórias da Plataforma Ecosol agrupadas por módulo, com critérios de aceita�
 | [HU18](#hu18) | Autorizar a exibição dos contatos de um coletivo | RF17 |
 | [HU19](#hu19) | Gerenciar as contas da equipe | RF18 |
 | [HU20](#hu20) | Consultar os dados da rede pela API pública | RF19 |
+| [HU21](#hu21) | Consultar o relatório de coletivos | RF20 |
+| [HU22](#hu22) | Navegar pelos subgrupos do “Saiba mais” | RF21 |
+| [HU23](#hu23) | Editar o conteúdo do “Saiba mais” | RF22 |
 
 ## Portal público
 
@@ -684,3 +687,118 @@ Histórias da Plataforma Ecosol agrupadas por módulo, com critérios de aceita�
   - **Quando** o cliente a lê
   - **Então** os dados estão em JSON, com chaves em snake_case e datas em ISO 8601 com fuso (ex.: `2026-12-05T14:00:00-03:00`)
   - **E** nenhuma resposta traz dados de pessoas, endereço completo, dados cadastrais ou contatos não autorizados
+
+## Evolução do MVP (Release 3)
+
+Histórias incluídas na versão 1.3 da documentação técnica, a partir dos pedidos da Casa Paul Singer. Elas descrevem o que a Sprint 3 (16/11 a 27/11/2026) vai implementar e ainda não estão no sistema.
+
+### <a id="hu21"></a>HU21 — Consultar o relatório de coletivos
+
+| Identificador | HU21 |
+| --- | --- |
+| **Título** | Consultar o relatório de coletivos |
+| **Descrição** | Como membro da equipe da Casa Paul Singer, quero ver em números e gráficos os dados dos coletivos cadastrados, para acompanhar a rede e apresentar resultados. |
+| **Requisitos relacionados** | RF20, RNF15, RNF16, RNF17, RNF18 |
+
+**Critérios de aceitação:**
+
+- **Cenário 1 — Indicadores gerais**
+  - **Dado** coletivos cadastrados em situações de cadastro diferentes
+  - **Quando** um membro da equipe com sessão aberta acessa o Relatório na Área da equipe
+  - **Então** vê o total de coletivos cadastrados, o total por situação do cadastro e o total de membros
+- **Cenário 2 — Gráficos de distribuição**
+  - **Dado** coletivos de bairros e segmentos diferentes, cadastrados em meses diferentes
+  - **Quando** o Relatório é exibido
+  - **Então** a página mostra a distribuição dos coletivos por bairro e por segmento e a quantidade de cadastros por mês
+- **Cenário 3 — Filtros de período e situação**
+  - **Dado** o Relatório aberto
+  - **Quando** o membro escolhe um período e uma situação do cadastro
+  - **Então** os indicadores e os gráficos são atualizados juntos, considerando só os coletivos do filtro
+  - **E** os filtros ficam no endereço (URL), para que o link filtrado possa ser compartilhado com a equipe
+- **Cenário 4 — Filtro sem resultados**
+  - **Dado** um filtro que não corresponde a nenhum coletivo
+  - **Quando** é aplicado
+  - **Então** a página informa que não há dados para o filtro, em vez de exibir gráficos vazios
+- **Cenário 5 — Só dados agregados**
+  - **Dado** qualquer resposta da API usada pelo Relatório
+  - **Quando** é lida
+  - **Então** traz apenas contagens e percentuais, sem nome, contato ou documento de nenhuma pessoa
+- **Cenário 6 — Acesso restrito à equipe**
+  - **Dado** um visitante sem sessão ou um usuário que não é da equipe
+  - **Quando** tenta abrir o Relatório ou consultar a API dele
+  - **Então** o acesso é recusado e nenhum número é exibido
+- **Cenário 7 — Celular e computador**
+  - **Dado** um membro da equipe usando o celular
+  - **Quando** abre o Relatório
+  - **Então** indicadores, gráficos e filtros ficam legíveis e utilizáveis, como no computador
+
+### <a id="hu22"></a>HU22 — Navegar pelos subgrupos do “Saiba mais”
+
+| Identificador | HU22 |
+| --- | --- |
+| **Título** | Navegar pelos subgrupos do “Saiba mais” |
+| **Descrição** | Como visitante do portal (sem login), quero encontrar separadas as informações sobre a Casa Paul Singer, a Economia Solidária e a ITES/IFRJ, para achar mais rápido o que procuro. |
+| **Requisitos relacionados** | RF21, RF10, RNF18, RNF19, RNF20 |
+
+**Critérios de aceitação:**
+
+- **Cenário 1 — Página índice**
+  - **Dado** os três subgrupos com conteúdo publicado
+  - **Quando** o visitante acessa “Saiba mais” pelo menu principal
+  - **Então** vê uma página índice com acesso à Casa Paul Singer, à Economia Solidária e à ITES/IFRJ
+- **Cenário 2 — Página do subgrupo**
+  - **Dado** um subgrupo com seções publicadas
+  - **Quando** o visitante o escolhe
+  - **Então** vê as seções publicadas daquele subgrupo, na ordem definida pela equipe
+- **Cenário 3 — Navegação entre subgrupos**
+  - **Dado** o visitante na página de um subgrupo, no celular ou no computador
+  - **Quando** quer ler outro subgrupo
+  - **Então** passa a ele pela navegação da própria página, sem precisar voltar ao índice
+- **Cenário 4 — Seção despublicada**
+  - **Dado** uma seção que a equipe despublicou
+  - **Quando** o visitante abre o subgrupo dela
+  - **Então** a seção não aparece
+- **Cenário 5 — Subgrupo inexistente**
+  - **Dado** um endereço de subgrupo que não existe
+  - **Quando** é acessado
+  - **Então** o portal responde com a página 404
+- **Cenário 6 — Compartilhamento e busca**
+  - **Dado** a página de um subgrupo
+  - **Quando** o link é compartilhado ou o site é indexado
+  - **Então** a página tem título e descrição próprios e consta no `sitemap.xml`
+
+### <a id="hu23"></a>HU23 — Editar o conteúdo do “Saiba mais”
+
+| Identificador | HU23 |
+| --- | --- |
+| **Título** | Editar o conteúdo do “Saiba mais” |
+| **Descrição** | Como membro da equipe da Casa Paul Singer, quero editar pela área administrativa os textos do “Saiba mais”, para manter as informações atualizadas sem depender dos desenvolvedores. |
+| **Requisitos relacionados** | RF22, RF19, RNF15, RNF16 |
+
+**Critérios de aceitação:**
+
+- **Cenário 1 — Criar uma seção**
+  - **Dado** um membro da equipe na área administrativa
+  - **Quando** cria uma seção escolhendo o subgrupo e informando título e texto, com imagem opcional
+  - **Então** a seção é salva com um identificador (slug) único
+- **Cenário 2 — Ordenar as seções**
+  - **Dado** um subgrupo com várias seções
+  - **Quando** a equipe altera a ordem delas
+  - **Então** o portal passa a exibi-las na nova ordem
+- **Cenário 3 — Publicar e despublicar**
+  - **Dado** uma seção publicada
+  - **Quando** a equipe desmarca “publicado”
+  - **Então** a seção deixa de aparecer no portal e na API pública, sem ser excluída
+- **Cenário 4 — Identificador repetido**
+  - **Dado** uma seção já existente com determinado slug
+  - **Quando** a equipe tenta salvar outra seção com o mesmo slug
+  - **Então** o sistema recusa e informa que o identificador já está em uso
+- **Cenário 5 — Conteúdo atual preservado**
+  - **Dado** a atualização do sistema que cria as seções
+  - **Quando** é aplicada
+  - **Então** o conteúdo que hoje está fixo na página “Saiba mais” aparece como seções editáveis, sem perda de informação
+- **Cenário 6 — API somente leitura**
+  - **Dado** a rota pública das seções
+  - **Quando** um cliente a consulta
+  - **Então** recebe só as seções publicadas
+  - **E** pedidos de escrita (POST, PUT, PATCH ou DELETE) são recusados
