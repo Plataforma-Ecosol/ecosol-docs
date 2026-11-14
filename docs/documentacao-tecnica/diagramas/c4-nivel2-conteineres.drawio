@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="C4---Nível-2-(Contêineres)" name="C4 - Nível 2 (Contêineres)">
+    <mxGraphModel dx="1000" dy="1060" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1060" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object id="publico" placeholders="1" c4Name="Público geral" c4Type="Pessoa" c4Description="Navegador do computador ou celular." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;fontSize=11;dashed=0;fillColor=#08427B;strokeColor=#073B6F;shape=mxgraph.c4.person2;resizable=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];" vertex="1" parent="1">
+            <mxGeometry x="60" y="10" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="busc" placeholders="1" c4Name="Buscadores e redes sociais" c4Type="Sistemas externos" c4Description="Google, WhatsApp e afins." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;rounded=1;arcSize=10;fillColor=#999999;strokeColor=#8A8A8A;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="360" y="50" width="250" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="equipe" placeholders="1" c4Name="Equipe da Casa Paul Singer" c4Type="Pessoa — Administrador" c4Description="Acessa a área administrativa." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;fontSize=11;dashed=0;fillColor=#08427B;strokeColor=#073B6F;shape=mxgraph.c4.person2;resizable=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];" vertex="1" parent="1">
+            <mxGeometry x="720" y="10" width="220" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="osm" placeholders="1" c4Name="OpenStreetMap" c4Type="Sistema externo" c4Description="Tiles do mapa base." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;rounded=1;arcSize=10;fillColor=#999999;strokeColor=#8A8A8A;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="0" y="560" width="180" height="110" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="fronteira" placeholders="1" c4Name="Plataforma Ecosol" c4Type="SystemScopeBoundary" c4Application="Sistema de software" label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;">
+          <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;spacing=12;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;allowArrows=0;connectable=0;expand=0;recursiveResize=0;pointerEvents=0;absoluteArcSize=1;fontFamily=Helvetica;" vertex="1" parent="1">
+            <mxGeometry x="220" y="260" width="760" height="780" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="web" placeholders="1" c4Name="Aplicação web pública" c4Type="Contêiner" c4Description="Renderiza no servidor as páginas públicas: home, coletivos, perfil, agenda, mapa e Saiba mais. O mapa (Leaflet) roda no navegador. Hospedada na Vercel." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;[%c4Type%: %c4Technology%]&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" c4Technology="Next.js 16, React, TypeScript, Tailwind CSS">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;rounded=1;arcSize=6;fillColor=#438DD5;strokeColor=#3C7FC0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="260" y="320" width="360" height="170" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="django" placeholders="1" c4Name="Aplicação Django" c4Type="Contêiner" c4Description="API REST pública somente leitura (/api/) com paginação, busca e filtros; área administrativa (/admin/) com login por sessão; regras de visibilidade e de LGPD. Imagem Docker hospedada no Render." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;[%c4Type%: %c4Technology%]&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" c4Technology="Python, Django 5.2, Django REST Framework, Django Admin + Unfold">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;rounded=1;arcSize=6;fillColor=#438DD5;strokeColor=#3C7FC0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[1,1,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="560" y="570" width="390" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="storage" placeholders="1" c4Name="Armazenamento de imagens" c4Type="Contêiner" c4Description="Fotos dos coletivos, galerias de eventos e capas dos pontos de interesse." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;[%c4Type%: %c4Technology%]&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" c4Technology="Supabase Storage, compatível com S3">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;shape=cylinder3;size=15;boundedLbl=1;rounded=0;fontSize=12;fillColor=#438DD5;strokeColor=#3C7FC0;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="250" y="810" width="290" height="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="db" placeholders="1" c4Name="Banco de dados" c4Type="Contêiner" c4Description="Coletivos, pessoas, categorias, eventos, pontos de interesse e usuários. Esquema gerido pelas migrations do Django." label="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;[%c4Type%: %c4Technology%]&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" c4Technology="PostgreSQL — Supabase">
+          <mxCell style="whiteSpace=wrap;html=1;fontColor=#ffffff;align=center;labelBackgroundColor=none;metaEdit=1;fontFamily=Helvetica;shape=cylinder3;size=15;boundedLbl=1;rounded=0;fontSize=12;fillColor=#438DD5;strokeColor=#3C7FC0;points=[[0.5,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.5,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="620" y="810" width="300" height="150" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="r1" placeholders="1" c4Type="Relationship" c4Description="Acessa as páginas" c4Technology="HTTPS" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="publico" target="web">
+            <mxGeometry relative="1" as="geometry" x="-0.55" y="0">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="r2" placeholders="1" c4Type="Relationship" c4Description="Indexam e geram prévia de links" c4Technology="HTTPS" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="busc" target="web">
+            <mxGeometry relative="1" as="geometry" x="-0.45" y="0">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="r3" placeholders="1" c4Type="Relationship" c4Description="Administra pelo /admin/" c4Technology="HTTPS, sessão httpOnly" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="equipe" target="django">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="r4" placeholders="1" c4Type="Relationship" c4Description="Lê dados no servidor (somente GET)" c4Technology="HTTPS/JSON" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="django">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="r5" placeholders="1" c4Type="Relationship" c4Description="Mapa no navegador carrega os tiles" c4Technology="HTTPS" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="osm">
+            <mxGeometry relative="1" as="geometry" x="0.45" y="0">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object id="r6" placeholders="1" c4Type="Relationship" c4Description="Busca imagens públicas" c4Technology="HTTPS" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="storage">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="r7" placeholders="1" c4Type="Relationship" c4Description="Envia imagens" c4Technology="API S3, django-storages" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="django" target="storage">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object id="r8" placeholders="1" c4Type="Relationship" c4Description="Lê e grava" c4Technology="SQL, psycopg" label="&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;">
+          <mxCell style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#707070;metaEdit=1;endSize=12;startSize=12;rounded=0;labelBackgroundColor=#FFFFFF;fontFamily=Helvetica;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="django" target="db">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

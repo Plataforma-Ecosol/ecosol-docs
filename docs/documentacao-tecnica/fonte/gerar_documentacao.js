@@ -339,16 +339,16 @@ const secao13 = [
 ];
 
 // ---- 2. Design e arquitetura ---------------------------------------------------------
-const [c1w, c1h] = tamanho("diagramas/c4-nivel1-contexto.png", 5.6, 5.8);
-const [c2w, c2h] = tamanho("diagramas/c4-nivel2-conteineres.png", 7.0, 6.2);
+const [c1w, c1h] = tamanho("diagramas/c4-nivel1-contexto.drawio.png", 5.6, 5.8);
+const [c2w, c2h] = tamanho("diagramas/c4-nivel2-conteineres.drawio.png", 7.0, 6.2);
 const secao2a = [
   H1("2. DESIGN E ARQUITETURA DA SOLUÇÃO", { quebra: true, before: 0 }),
   H2("2.1 Modelo de arquitetura — contexto do sistema (C4, nível 1)", { before: 120 }),
-  Figura("diagramas/c4-nivel1-contexto.png", c1w, c1h),
+  Figura("diagramas/c4-nivel1-contexto.drawio.png", c1w, c1h),
   Legenda("Figura 1 – Diagrama de contexto da Plataforma Ecosol (C4, nível 1)."),
   P("Dois perfis usam o sistema: o Público Geral, que consulta coletivos, agenda e mapa sem login, e a equipe da Casa Paul Singer, que administra os dados com login. Os sistemas externos são o OpenStreetMap, que fornece o mapa base, e os buscadores e redes sociais, que indexam as páginas e montam a prévia dos links. Banco de dados e armazenamento de imagens fazem parte da solução e aparecem no nível 2."),
   H2("2.2 Modelo de arquitetura — contêineres (C4, nível 2)", { quebra: true, before: 0 }),
-  Figura("diagramas/c4-nivel2-conteineres.png", c2w, c2h),
+  Figura("diagramas/c4-nivel2-conteineres.drawio.png", c2w, c2h),
   Legenda("Figura 2 – Diagrama de contêineres da Plataforma Ecosol (C4, nível 2)."),
   P("A solução tem quatro contêineres. A aplicação web pública (Next.js, na Vercel) renderiza as páginas no servidor e lê os dados da aplicação Django só por GET. A aplicação Django (no Render, em Docker) concentra a API REST pública e a área administrativa, e é a única que grava no banco PostgreSQL e no armazenamento de imagens, ambos no Supabase. As imagens públicas são lidas direto do armazenamento. No ambiente local, o repositório ecosol-infra sobe banco, API e portal com um comando."),
 ];
