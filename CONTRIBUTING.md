@@ -28,5 +28,7 @@ repositório.
 ## Atenção: repositório público
 
 Não publique dados pessoais (pessoas dos coletivos, contatos da equipe da Casa Paul
-Singer), senhas, chaves ou URLs de bancos. Issues e discussões internas ficam no
-repositório privado `ecosol-gestao` e no [quadro](https://github.com/orgs/Plataforma-Ecosol/projects/1).
+Singer), senhas, chaves ou URLs de bancos. As tarefas ficam nas issues do
+`ecosol-backend` e do `ecosol-frontend`, acompanhadas nos quadros
+[Backend](https://github.com/orgs/Plataforma-Ecosol/projects/2) e
+[Frontend](https://github.com/orgs/Plataforma-Ecosol/projects/3).

@@ -18,7 +18,9 @@ Integrador, os diagramas e a Wiki do projeto.
 | Backend (Django) | <https://github.com/Plataforma-Ecosol/ecosol-backend> |
 | Frontend (Next.js) | <https://github.com/Plataforma-Ecosol/ecosol-frontend> |
 | Infraestrutura (Docker) | <https://github.com/Plataforma-Ecosol/ecosol-infra> |
-| Quadro Scrum | <https://github.com/orgs/Plataforma-Ecosol/projects/1> |
+| Quadro Kanban (backend) | <https://github.com/orgs/Plataforma-Ecosol/projects/2> |
+| Quadro Kanban (frontend) | <https://github.com/orgs/Plataforma-Ecosol/projects/3> |
+| Plano do Projeto (A4) | <https://github.com/Plataforma-Ecosol/ecosol-docs/wiki/Plano-do-Projeto> |
 | Wiki | <https://github.com/Plataforma-Ecosol/ecosol-docs/wiki> |
 
 ## O que tem aqui

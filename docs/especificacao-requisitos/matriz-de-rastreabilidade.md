@@ -17,7 +17,7 @@ Na coluna de verificação, os arquivos `test_*.py` são suítes do ecosol-backe
 | **RF07** | [HU07](historias-de-usuario.md#hu07) | [UC03](casos-de-uso.md#uc03) | `test_api_eventos.py`, `lib/filtros.test.ts`, `componentes/CartaoEvento.test.tsx` |
 | **RF08** | [HU08](historias-de-usuario.md#hu08) | [UC03](casos-de-uso.md#uc03) | `test_api_eventos.py`, `lib/datas.test.ts` |
 | **RF09** | [HU09](historias-de-usuario.md#hu09) | — | `test_api_pontos.py`, `componentes/ListaDePontos.test.tsx` |
-| **RF10** | [HU10](historias-de-usuario.md#hu10) | — | `app/saiba-mais/page.test.tsx`, `lib/casa.test.ts` |
+| **RF10** | [HU10](historias-de-usuario.md#hu10), [HU22](historias-de-usuario.md#hu22) | — | `app/saiba-mais/page.test.tsx`, `lib/casa.test.ts` |
 | **RF11** | [HU11](historias-de-usuario.md#hu11) | — | `test_admin.py`; teste manual de login e logout |
 | **RF12** | [HU12](historias-de-usuario.md#hu12) | [UC02](casos-de-uso.md#uc02) | `test_admin.py`, `test_models.py`, `test_imagens_e_log.py` |
 | **RF13** | [HU13](historias-de-usuario.md#hu13) | — | `test_admin.py`, `test_models.py` |
@@ -27,6 +27,9 @@ Na coluna de verificação, os arquivos `test_*.py` são suítes do ecosol-backe
 | **RF17** | [HU17](historias-de-usuario.md#hu17), [HU18](historias-de-usuario.md#hu18) | [UC02](casos-de-uso.md#uc02) | `test_api_coletivos.py`, `test_admin.py`, `lib/contatos.test.ts` |
 | **RF18** | [HU19](historias-de-usuario.md#hu19) | — | `test_admin.py`, `test_identidade_admin.py`; teste manual |
 | **RF19** | [HU20](historias-de-usuario.md#hu20) | — | `test_api_coletivos.py`, `test_api_eventos.py`, `test_api_pontos.py`, `test_api_filtros.py` |
+| **RF20** | [HU21](historias-de-usuario.md#hu21) | — | A criar na Sprint 3: testes dos endpoints de agregados e da restrição de acesso (ecosol-backend #56 a #59) e testes da página de Relatório (ecosol-frontend #70) |
+| **RF21** | [HU22](historias-de-usuario.md#hu22) | — | A criar na Sprint 3: testes das rotas e da navegação dos subgrupos (ecosol-frontend #72 a #76) |
+| **RF22** | [HU23](historias-de-usuario.md#hu23) | — | A criar na Sprint 3: testes do modelo, do Admin e do endpoint público das seções (ecosol-backend #61 a #63) |
 
 ## Regras de negócio
 
@@ -67,12 +70,12 @@ A condição de verificação de cada um está em [Requisitos não funcionais](r
 | **RNF12** | — | — | Teste manual de instalação |
 | **RNF13** | — | — | Teste manual com o PostgreSQL do ambiente Docker |
 | **RNF14** | [HU09](historias-de-usuario.md#hu09) | — | Teste manual a cada release |
-| **RNF15** | [HU11](historias-de-usuario.md#hu11), [HU20](historias-de-usuario.md#hu20) | — | `test_api_*.py` e `test_admin.py` |
-| **RNF16** | [HU11](historias-de-usuario.md#hu11), [HU19](historias-de-usuario.md#hu19) | — | `test_identidade_admin.py` (hash da senha) e inspeção do cookie no navegador |
-| **RNF17** | [HU05](historias-de-usuario.md#hu05), [HU13](historias-de-usuario.md#hu13), [HU18](historias-de-usuario.md#hu18), [HU20](historias-de-usuario.md#hu20) | — | Regressão de LGPD nas suítes `test_api_*.py`, no CI |
-| **RNF18** | [HU01](historias-de-usuario.md#hu01), [HU09](historias-de-usuario.md#hu09), [HU10](historias-de-usuario.md#hu10) | — | Teste manual em celular e no modo responsivo do navegador |
-| **RNF19** | [HU10](historias-de-usuario.md#hu10) | — | `componentes/ui/paleta.test.ts`, `test_identidade_admin.py` e inspeção visual |
-| **RNF20** | [HU01](historias-de-usuario.md#hu01), [HU04](historias-de-usuario.md#hu04), [HU05](historias-de-usuario.md#hu05), [HU08](historias-de-usuario.md#hu08) | — | `app/sitemap.test.ts`, `app/robots.test.ts`, `app/compartilhamento.test.ts` e depurador de prévia de link |
+| **RNF15** | [HU11](historias-de-usuario.md#hu11), [HU20](historias-de-usuario.md#hu20), [HU21](historias-de-usuario.md#hu21), [HU23](historias-de-usuario.md#hu23) | — | `test_api_*.py` e `test_admin.py` |
+| **RNF16** | [HU11](historias-de-usuario.md#hu11), [HU19](historias-de-usuario.md#hu19), [HU21](historias-de-usuario.md#hu21), [HU23](historias-de-usuario.md#hu23) | — | `test_identidade_admin.py` (hash da senha) e inspeção do cookie no navegador |
+| **RNF17** | [HU05](historias-de-usuario.md#hu05), [HU13](historias-de-usuario.md#hu13), [HU18](historias-de-usuario.md#hu18), [HU20](historias-de-usuario.md#hu20), [HU21](historias-de-usuario.md#hu21) | — | Regressão de LGPD nas suítes `test_api_*.py`, no CI |
+| **RNF18** | [HU01](historias-de-usuario.md#hu01), [HU09](historias-de-usuario.md#hu09), [HU10](historias-de-usuario.md#hu10), [HU21](historias-de-usuario.md#hu21), [HU22](historias-de-usuario.md#hu22) | — | Teste manual em celular e no modo responsivo do navegador |
+| **RNF19** | [HU10](historias-de-usuario.md#hu10), [HU22](historias-de-usuario.md#hu22) | — | `componentes/ui/paleta.test.ts`, `test_identidade_admin.py` e inspeção visual |
+| **RNF20** | [HU01](historias-de-usuario.md#hu01), [HU04](historias-de-usuario.md#hu04), [HU05](historias-de-usuario.md#hu05), [HU08](historias-de-usuario.md#hu08), [HU22](historias-de-usuario.md#hu22) | — | `app/sitemap.test.ts`, `app/robots.test.ts`, `app/compartilhamento.test.ts` e depurador de prévia de link |
 | **RNF21** | — | — | Inspeção dos repositórios |
 | **RNF22** | — | — | Arquivo `LICENSE` de cada repositório |
 | **RNF23** | [HU12](historias-de-usuario.md#hu12), [HU13](historias-de-usuario.md#hu13), [HU18](historias-de-usuario.md#hu18) | [UC02](casos-de-uso.md#uc02) | `test_admin.py` e página [Privacidade e LGPD](https://github.com/Plataforma-Ecosol/ecosol-docs/wiki/Privacidade-e-LGPD) da Wiki |

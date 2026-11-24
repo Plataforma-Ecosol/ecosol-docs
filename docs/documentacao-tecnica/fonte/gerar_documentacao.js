@@ -194,7 +194,7 @@ const capa = [
       ["Infraestrutura: https://github.com/Plataforma-Ecosol/ecosol-infra"],
     ]),
     linha("Wiki de planejamento e documentação do projeto", [Pendente("URL da Wiki do projeto no GitHub")]),
-    linha("Quadro Kanban", [["https://github.com/orgs/Plataforma-Ecosol/projects/1"], ["(GitHub Project “Plataforma ES Niterói (SCRUM)”)"]]),
+    linha("Quadro Kanban", [["Backend: https://github.com/orgs/Plataforma-Ecosol/projects/2"], ["Frontend: https://github.com/orgs/Plataforma-Ecosol/projects/3"]]),
     linha("Semestre", "2026.2"),
   ]));
 }
